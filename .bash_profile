@@ -47,9 +47,12 @@ ipinfo(){
 curl http://ipinfo.io/$1
 }
 
+oneforall(){
+	python3 oneforall.py --target $1 --takeover True run
+}
 
 #------ Tools ------
-dirsearch(){ runs dirsearch and takes host and extension as arguments
+dirsearch(){ #runs dirsearch and takes host and extension as arguments
 python3 ~/tools/dirsearch/dirsearch.py -u $1 -e $2 -t 50 -b 
 }
 
